@@ -322,7 +322,7 @@ int main(int argc, char *argv[])
 				debug_info("working_directory: %s\n", working_directory);
 				plist_free(container);
 			} else {
-					plist_free(container);
+				plist_free(container);
 				fprintf(stderr, "Could not determine container path for bundle identifier %s.\n", bundle_identifier);
 				goto cleanup;
 			}
