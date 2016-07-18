@@ -188,3 +188,10 @@ LIBIMOBILEDEVICE_API service_error_t service_disable_ssl(service_client_t client
 	return idevice_to_service_error(idevice_connection_disable_ssl(client->connection));
 }
 
+LIBIMOBILEDEVICE_API service_error_t service_get_connection(service_client_t client, idevice_connection_t * connection){
+	if (!client || !connection)
+		return SERVICE_E_INVALID_ARG;
+	*connection = client->connection;
+	return SERVICE_E_SUCCESS;
+}
+

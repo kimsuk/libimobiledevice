@@ -162,6 +162,18 @@ service_error_t service_enable_ssl(service_client_t client);
  */
 service_error_t service_disable_ssl(service_client_t client);
 
+/**
+ * Get underlying idevice_connection of the given service client
+ *
+ * @param client The connected service client to get idevice_connection
+ * @param connection Pointer to an idevice_connection_t that will be filled
+ *   with the necessary data of the connection.
+ *
+ * @return SERVICE_E_SUCCESS on success,
+ *     SERVICE_E_INVALID_ARG if client or connection is NULL.
+ */
+service_error_t service_get_connection(service_client_t client, idevice_connection_t * connection);
+
 #ifdef __cplusplus
 }
 #endif
